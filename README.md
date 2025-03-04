@@ -6,20 +6,20 @@ Iniciando estudos em testes automatizados utilizando a biblioteca Jest.
 - Primeiramente instalamos as libs necessárias como dependências de desenvolvimento.
 
   ```bash
-  $ npm i jest @types/jest ts-jest -D
+   npm i jest @types/jest ts-jest -D
   ```
 ## Iniciando jest.config.js
 - Esse é um arquivo de configuração do jest e temos duas maneiras de criar.
 - Em ambiente **JS** geralmente se inicia com o:
     ```bash
-    $ npx jest --init
+     npx jest --init
     ```
     > Vai me perguntar algumas coisas no terminal e no fim será gerado um arquivo maior com mais opções disponíveis.
 
 
 - Em ambiente **TS** geralmente se inicia com o ts-jest por já configurar os tipos:
     ```bash
-    $ npx ts-jest config:init
+     npx ts-jest config:init
     ```
     > Nesse não me pergunta nada e já me gera um arquivo mais enxuto.
 
@@ -29,7 +29,7 @@ Iniciando estudos em testes automatizados utilizando a biblioteca Jest.
 - Assim quando eu rodar meu script ele vai procurar esses arquivos.
 - O comando é:
     ```
-    $ npx jest
+     npx jest
     ```
 ## Criando testes
 - O teste mais básico criamos chamando a função **it**() ou **test**() e elas recebe **2 parâmetros**.
