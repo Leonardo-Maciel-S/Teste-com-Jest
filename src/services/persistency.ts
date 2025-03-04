@@ -1,4 +1,4 @@
-import type { IPersistency } from "./interfaces/persistency";
+import type { IPersistency } from "../classes/interfaces/persistency";
 
 export class Persistency implements IPersistency {
 	saveOrder(): void {
