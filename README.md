@@ -64,3 +64,11 @@ Iniciando estudos em testes automatizados utilizando a biblioteca Jest.
         expect(customer).toBeInstanceOf(Customer);
       });
     });
+
+
+## Considerações
+
+- É uma boa biblioteca de testes, bem intuitiva e de fácil configuração.
+- A partir de agora é dar uma boa lida na documentação para entender mais a fundo sobre o que cada função toBe faz.
+- Lembrando que esse repositório é apenas o introdutório a teste com foco apenas no TypeScript para back-end.
+- Posteriormente continuarei aprendendo sobre testes focados em front-end.
