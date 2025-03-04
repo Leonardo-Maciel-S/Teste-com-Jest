@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "webpack -w",
 		"test": "jest",
-		"test:silent": "jest --watchAll --silent --noStackTrace"
+		"test:silent": "jest --watchAll --silent --noStackTrace",
+		"test:coverage": "npx jest --coverage"
 	},
 	"keywords": [],
 	"author": "",
