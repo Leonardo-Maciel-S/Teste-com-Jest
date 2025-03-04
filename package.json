@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev": "webpack -w"
+		"dev": "webpack -w",
+		"test": "jest",
+		"test:silent": "jest --watchAll --silent --noStackTrace"
 	},
 	"keywords": [],
 	"author": "",

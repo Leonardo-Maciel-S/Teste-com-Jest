@@ -32,6 +32,35 @@ Iniciando estudos em testes automatizados utilizando a biblioteca Jest.
     $ npx jest
     ```
 ## Criando testes
-- Começo chamando a função "it()" ou "test()" e elas recebe **2 parâmetros**.
-- O primeiro é uma **string**, onde passamos uma descrição do que se trata o teste.
+- O teste mais básico criamos chamando a função **it**() ou **test**() e elas recebe **2 parâmetros**.
+- O primeiro é uma **string**, onde passamos uma breve descrição do que se trata o teste.
 - O segundo parâmetro é uma **função anonima** onde escrevemos nosso teste dentro
+  ```TypeScript
+    it("retorna 1", () => {
+      const number = 1;
+
+      expect(number).toBe(1);
+    });
+    ```
+
+  > O expect é como realmente vamos testar o código, passamos nossa variável como parâmetro e chamamos a segunda função em cascata para confirmar o valor.
+- Podemos ler esse código da seguinte maneira: "Espero que o numero seja 1"
+- Quando executamos o script de teste ele vai analisar e se a variável for igual o parâmetro que passamos no toBe ele vai passar, se for diferente ele falha.
+
+## Descrição
+
+- Podemos envolver todo o nosso teste dentro de uma função chamada **describe** que também **2 parâmetros**.
+- Com esse recurso podemos criar um "grupo de teste", fazer uma descrição do que seria testado.
+- Ex: "deveria criar um novo usuário", dentro da função poderíamos colocar todos os testes que tem relação com criação de novos clientes.
+  ```TypeScript
+    describe("Should create a new customer ", () => {
+      it("Create customer Leonardo", () => {
+        const customer = new Customer("Leonardo", "000.000.000-00");
+        expect(customer).toBeInstanceOf(Customer);
+      });
+
+      it("Create customer João", () => {
+        const customer = new Customer("João", "111.111.111-11");
+        expect(customer).toBeInstanceOf(Customer);
+      });
+    });

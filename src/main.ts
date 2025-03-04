@@ -1,10 +1,10 @@
 import { NoDiscount } from "./classes/discount";
 import { Messaging } from "./services/messaging";
 import { Order } from "./classes/order";
-import { Persistency } from "./classes/persistency";
 import { Product } from "./classes/product";
 import { ShoppingCart } from "./classes/shopping-cart";
 import { IndividualCustomer } from "./classes/customer";
+import { Persistency } from "./services/persistency";
 
 const noDiscount = new NoDiscount();
 const shoppingCart = new ShoppingCart(noDiscount);
