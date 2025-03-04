@@ -1,11 +1,11 @@
 import type {
 	IndividualCustomerProtocol,
 	EnterpriseCustomerProtocol,
-	CustomerOrder,
+	ICustomerOrder,
 } from "./customer-protocol";
 
 export class IndividualCustomer
-	implements IndividualCustomerProtocol, CustomerOrder
+	implements IndividualCustomerProtocol, ICustomerOrder
 {
 	constructor(
 		public name: string,
@@ -14,7 +14,7 @@ export class IndividualCustomer
 	) {}
 
 	getName(): string {
-		return this.name;
+		return this.name + " " + this.lastName;
 	}
 	getIDN(): string {
 		return this.cpf;
@@ -22,16 +22,16 @@ export class IndividualCustomer
 }
 
 export class EnterpriseCustomer
-	implements EnterpriseCustomerProtocol, CustomerOrder
+	implements EnterpriseCustomerProtocol, ICustomerOrder
 {
 	constructor(
 		public name: string,
 		public cnpj: string,
 	) {}
 	getName(): string {
-		return this.cnpj;
+		return this.name;
 	}
 	getIDN(): string {
-		return this.name;
+		return this.cnpj;
 	}
 }
